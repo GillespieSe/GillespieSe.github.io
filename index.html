@@ -14,24 +14,46 @@
       font: 20px Montserrat, sans-serif;
       line-height: 1.8;
       color: #f5f6f7;
+      -moz--webkit-animation: seek 5s 
   }
+  body {-webkit-animation-timing-function: ease;}
+  @-webkit-keyframes seek {
+  from {right: 0px;}
+  to {right: 300px;}
+  }
+  
   p {font-size: 16px;}
   .margin {margin-bottom: 45px;}
   .bg-1 { 
-      background-color: #1abc9c; /* Green */
-      color: #ffffff;
+      background-color:pink;
+      -webkit-animation-name: sok;
+      -webkit-animation-duration: 4s;
+      animation-iteration-count: infinite;
+      
+      
   }
-  .bg-2 { 
+    @-webkit-keyframes sok {
+    from {background-color: red}
+    to {background-color: blue}
+    
+  }
+  .bg-2{ 
       background-color: #474e5d; /* Dark Blue */
       color: #ffffff;
+      text-shadow: 2px 2px 5px blue;
+       
   }
-  .bg-3 { 
-      background-color: #ffffff; /* White */
+  .bg-3:hover { 
+      background-color: pink; /* White */
       color: #555555;
+      -webkit-transition: width 4s; /* For Safari 3.1 to 6.0 */
+       transition: width 4s;
+     
   }
   .bg-4 { 
-      background-color: #2f2f2f; /* Black Gray */
+      background-image: linear-gradient(green, yellow); /* Black Gray */
       color: #fff;
+      
   }
   .container-fluid {
       padding-top: 70px;
@@ -95,7 +117,7 @@
   <h3 class="margin">Where To Find Me?</h3><br>
   <div class="row">
     <div class="col-sm-4">
-      <p> in my schoool</p>
+      <p id="ok"> in my schoool</p>
       <img src="birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
     </div>
     <div class="col-sm-4"> 
